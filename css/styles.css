@@ -1,3 +1,5 @@
+:://root 
+
 html,
 body {
   margin: 0;
@@ -201,10 +203,9 @@ a:-webkit-any-link {
   float: none;
   width: 20%;
   padding: 50px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px;
 }
 
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -243,6 +244,9 @@ a:-webkit-any-link {
     width: 100%;
   }
 }
+
+/* Circle */
+
 .circle {
   width: 250px;
   height: 100px;
