@@ -3,8 +3,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
 }
-
+@media (min-width: 600px) and (max-width: 1200px) {
+}
 /* STYLES SPECIFIC TO HEADER */
 .header {
   overflow: hidden;
@@ -121,6 +123,8 @@ body {
   text-align: center;
 }
 
+/* Collection */
+
 #collection {
   background: #ded2be;
   color: #0a3641;
@@ -130,11 +134,22 @@ body {
   padding-left: 80px;
   text-align: left;
 }
+
+#collection-jacket_1 {
+  background: #ded2be;
+  color: #0a3641;
+  padding-top: 1em;
+  padding-right: 30px;
+
+  padding-left: 80px;
+  text-align: left;
+}
 #collection-jacket {
   background: #ded2be;
   color: #0a3641;
   padding: 1em;
   text-align: center;
+  display: grid;
 }
 #collection-button {
   background: #ded2be;
@@ -146,7 +161,11 @@ body {
 }
 .img-collection {
   text-align: center;
+  display: grid;
 }
+
+/* HTML tag */
+
 h1,
 h2,
 h3 {
@@ -167,6 +186,9 @@ p {
 a:-webkit-any-link {
   text-decoration: none !important;
 }
+
+/* Row -column */
+
 * {
   box-sizing: border-box;
 }
@@ -174,11 +196,18 @@ a:-webkit-any-link {
 .row {
   display: flex;
 }
+
 .column {
-  float: left;
-  width: 30%;
-  padding-left: 10px;
-  padding-right: 10px;
+  float: none;
+  width: 20%;
+  padding: 50px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
 }
 
 /* Checkbox */
@@ -186,7 +215,7 @@ a:-webkit-any-link {
 .checkbox {
   width: auto;
   height: 50px;
-  padding: 40px;
+  padding: 16px;
   background-color: #ded2be;
   color: black;
   font-size: 20px;
@@ -261,17 +290,4 @@ button:focus {
   margin-left: 50%;
   padding: 25px;
   font-size: 40px;
-}
-/* Create four equal columns that floats next to each other */
-.column {
-  float: none;
-  width: 20%;
-  padding: 50px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
 }
